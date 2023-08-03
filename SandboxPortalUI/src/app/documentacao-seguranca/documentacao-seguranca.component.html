@@ -1,0 +1,14 @@
+<h3 style='margin-top:2.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;line-height:107%;font-size:16px;font-family:"Calibri Light",sans-serif;color:#1F4D78;font-weight:normal;'><span style="font-size: 18px;">Seguran&ccedil;a de Dados</span></h3>
+<p><br></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>Devido &agrave; necessidade de controle do acesso e compartilhamento das informa&ccedil;&otilde;es, a plataforma API Gateway habilita para cada cliente a criptografia dos dados enviados e recebidos atrav&eacute;s das integra&ccedil;&otilde;es, considerando o fluxo e o workflow de cada cliente.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>Caso a funcionalidade de criptografia esteja habilitada, ser&atilde;o aplicadas as seguintes regras:</p>
+<ul style="list-style-type: disc;">
+    <li>Criptografia sim&eacute;trica no padr&atilde;o AES256;</li>
+    <li>Valor de Chave e Salt alinhados com cada cliente em tempo de planejamento de projeto;</li>
+    <li>Caso a feature de criptografia esteja ativa, o cliente ir&aacute; utilizar as rotas criptografadas de cada funcionalidade para enviar os dados criprografados no seguinte modelo:</li>
+</ul>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp; &nbsp; &nbsp; &#123; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &ldquo;encrypted_content&rdquo;: &ldquo;@$RdSED#R34rFsdVD433rfds4&rdquo;<br>&nbsp; &nbsp; &nbsp; &#125;</p>
+<ul style="list-style-type: disc;">
+    <li>A rota criptografada dever&aacute; descriptografar os dados e desserializar o objeto para o dom&iacute;nio esperado dentro da rota principal para aplicar as regras de neg&oacute;cios necess&aacute;rias;</li>
+    <li>Caso a feature de criptografia esteja ativa, o retorno de dados da API dever&aacute; ser criptografado para o seguinte modelo antes do retorno ser enviado para o cliente.</li>
+</ul>
